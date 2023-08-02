@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Hamburger</title>
+    <link href="vendor/css/vendor.min.css" rel="stylesheet" />
+    <script defer src="vendor/js/jquery-3.1.1.min.js"></script>
+    <script defer src="vendor/js/vendor.min.js"></script>
+    <script defer src="js/components/CountAndPriceComponet.js"></script>
+    <script defer src="js/components/HamburgerFillingComponent.js"></script>
+    <script defer src="js/components/HamburgerInfoComponent.js"></script>
+    <script defer src="js/components/HamburgerTicketComponent.js"></script>
+    <script defer src="js/components/IngredientsFillingComponent.js"></script>
+    <script defer src="js/components/MenuComponent.js"></script>
+    <script defer src="js/components/SelectedIngredientsTableComponent.js"></script>
+    <script defer src="js/components/SelectSizeComponent.js"></script>
+    <script defer src="js/hamburger.js"></script>
+    <script defer src="js/index.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h1>Hamburger Shop</h1>
+        </div>
+        <div id="newHamburger" class="jumbotron" style="display: block;">
+            <h2 class="text-center">Select the size</h2>
+            <div class="row select-size"></div>
+        </div>
+        <div id="hamburgerFilling" style="display: none;">
+            <div class="row">
+                <div class="col-xs-4" id="hamburgerInfo">
+                    <dl class="dl-horizontal"
+                        style="border-bottom: 1px solid #999; margin-bottom: 5px; padding-bottom: 5px;">
+                        <dt>Size</dt>
+                        <dd class="info-size"></dd>
+                        <dt>Toppings</dt>
+                        <dd class="info-toppings"></dd>
+                        <dt>Stuffings</dt>
+                        <dd class="info-stuffings"></dd>
+                        <dt>Calories</dt>
+                        <dd class="info-calories"></dd>
+                    </dl>
+                    <dl class="dl-horizontal" id="priceInfo">
+                        <dt>Price</dt>
+                        <dd class="info-price"></dd>
+                    </dl>
+                </div>
+                <div class="col-xs-8 text-right">
+                    <button class="btn btn-lg btn-success" id="buyHamburger">
+                        <span class="glyphicon glyphicon-shopping-cart"
+                            style="padding-right: 10px;"></span>
+                        Buy It!
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="panel panel-default" id="toppingFilling">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <h4>Topping</h4>
+                                </div>
+                                <div class="col-xs-6 text-right">
+                                    <div class="btn-group ingredients-menu">
+                                        <button class="btn btn-success dropdown-toggle" id="addTopping" type="button"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Add Topping <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu ingredients">
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <table class="table selected-ingredients">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Name</th>
+                                    <th>Price</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="panel panel-default" id="stuffingFilling">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <h4>Stuffing</h4>
+                                </div>
+                                <div class="col-xs-6 text-right">
+                                    <div class="btn-group ingredients-menu">
+                                        <button class="btn btn-success dropdown-toggle" id="addStuffing" type="button"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Add Stuffing <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu ingredients">
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <table class="table selected-ingredients">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div style="border-bottom: 1px solid #bbb; margin-bottom: 20px;"></div>
+            <div class="row">
+                <div class="col-xs-4 col-xs-offset-8">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-xs-8 control-label text-right" for="count">Count:</label>
+                            <div class="col-xs-4">
+                                <input type="number" class="form-control" id="count" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-xs-8 control-label text-right" for="count">Total:</label>
+                            <div class="col-xs-4 form-control-static text-center" id="total">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4 col-xs-offset-4 panel panel-default" id="hamburgerTicket" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

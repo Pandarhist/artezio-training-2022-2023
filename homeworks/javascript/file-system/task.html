@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>File system</title>
+    <link href="styles/bootstrap-4.4.1-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles/tree.css" rel="stylesheet">
+    <script src="main.js"></script>
+</head>
+<body>
+<div class="jumbotron jumbotron-fluid" id="head">
+    <div class="container">
+        <h1 class="display-3">File system resources</h1>
+        <div class="row">
+            <div class="col-8">
+                <p class="lead">Represented as a list of file units with their properties.</p>
+            </div>
+            <div class="col-4 text-right">
+                <button class="btn btn-primary btn-lg" id="drawTree" onclick="generateTree()" type="button">
+                    Generate Tree
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row align-items-start justify-content-center">
+        <div class="col-4" id="resources">
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">fall.png</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>F
+                    </li>
+                    <li>
+                        <strong>Size: </strong>624578
+                    </li>
+                    <li>
+                        <strong>Location: </strong>seasons
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">access.log</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>F
+                    </li>
+                    <li>
+                        <strong>Size: </strong>0
+                    </li>
+                    <li>
+                        <strong>Location: </strong>teamers
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">denw</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>D
+                    </li>
+                    <li>
+                        <strong>Size: </strong>-
+                    </li>
+                    <li>
+                        <strong>Location: </strong>server
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">usera</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>D
+                    </li>
+                    <li>
+                        <strong>Size: </strong>-
+                    </li>
+                    <li>
+                        <strong>Location: </strong>users
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">twr</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>F
+                    </li>
+                    <li>
+                        <strong>Size: </strong>1245578
+                    </li>
+                    <li>
+                        <strong>Location: </strong>bin
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">system.log-2</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>F
+                    </li>
+                    <li>
+                        <strong>Size: </strong>1073745478
+                    </li>
+                    <li>
+                        <strong>Location: </strong>system
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">videos</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>D
+                    </li>
+                    <li>
+                        <strong>Size: </strong>-
+                    </li>
+                    <li>
+                        <strong>Location: </strong>usere
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">vidv.lib</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>F
+                    </li>
+                    <li>
+                        <strong>Size: </strong>23133
+                    </li>
+                    <li>
+                        <strong>Location: </strong>vidv
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">system.log-1</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>F
+                    </li>
+                    <li>
+                        <strong>Size: </strong>1073741978
+                    </li>
+                    <li>
+                        <strong>Location: </strong>system
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">videoviewer</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>F
+                    </li>
+                    <li>
+                        <strong>Size: </strong>259853
+                    </li>
+                    <li>
+                        <strong>Location: </strong>vidv
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">env</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>D
+                    </li>
+                    <li>
+                        <strong>Size: </strong>-
+                    </li>
+                    <li>
+                        <strong>Location: </strong>usera
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">imgv</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>D
+                    </li>
+                    <li>
+                        <strong>Size: </strong>-
+                    </li>
+                    <li>
+                        <strong>Location: </strong>programs
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">userc</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>D
+                    </li>
+                    <li>
+                        <strong>Size: </strong>-
+                    </li>
+                    <li>
+                        <strong>Location: </strong>users
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">db.bkp</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>F
+                    </li>
+                    <li>
+                        <strong>Size: </strong>6985142
+                    </li>
+                    <li>
+                        <strong>Location: </strong>backups
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">vidvcodec</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>F
+                    </li>
+                    <li>
+                        <strong>Size: </strong>1456202
+                    </li>
+                    <li>
+                        <strong>Location: </strong>vidv
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">dfun</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>D
+                    </li>
+                    <li>
+                        <strong>Size: </strong>-
+                    </li>
+                    <li>
+                        <strong>Location: </strong>denw
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">locks</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>D
+                    </li>
+                    <li>
+                        <strong>Size: </strong>-
+                    </li>
+                    <li>
+                        <strong>Location: </strong>opps
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">logs.bkp</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>F
+                    </li>
+                    <li>
+                        <strong>Size: </strong>478952123
+                    </li>
+                    <li>
+                        <strong>Location: </strong>backups
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">run</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>F
+                    </li>
+                    <li>
+                        <strong>Size: </strong>15204
+                    </li>
+                    <li>
+                        <strong>Location: </strong>bin
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">winter.png</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>F
+                    </li>
+                    <li>
+                        <strong>Size: </strong>526952
+                    </li>
+                    <li>
+                        <strong>Location: </strong>seasons
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">documents</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>D
+                    </li>
+                    <li>
+                        <strong>Size: </strong>-
+                    </li>
+                    <li>
+                        <strong>Location: </strong>usere
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">test.jpeg</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>F
+                    </li>
+                    <li>
+                        <strong>Size: </strong>4562
+                    </li>
+                    <li>
+                        <strong>Location: </strong>userb
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">win</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>F
+                    </li>
+                    <li>
+                        <strong>Size: </strong>61452
+                    </li>
+                    <li>
+                        <strong>Location: </strong>proc
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">backups</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>D
+                    </li>
+                    <li>
+                        <strong>Size: </strong>-
+                    </li>
+                    <li>
+                        <strong>Location: </strong>usere
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">proc</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>D
+                    </li>
+                    <li>
+                        <strong>Size: </strong>-
+                    </li>
+                    <li>
+                        <strong>Location: </strong>bin
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">vidv</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>D
+                    </li>
+                    <li>
+                        <strong>Size: </strong>-
+                    </li>
+                    <li>
+                        <strong>Location: </strong>programs
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">load.sh</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>F
+                    </li>
+                    <li>
+                        <strong>Size: </strong>3949
+                    </li>
+                    <li>
+                        <strong>Location: </strong>scripts
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">runfiles.bkp</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>F
+                    </li>
+                    <li>
+                        <strong>Size: </strong>69851
+                    </li>
+                    <li>
+                        <strong>Location: </strong>backups
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">imgv.lib</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>F
+                    </li>
+                    <li>
+                        <strong>Size: </strong>5563
+                    </li>
+                    <li>
+                        <strong>Location: </strong>imgv
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">imgv.conf</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>F
+                    </li>
+                    <li>
+                        <strong>Size: </strong>546
+                    </li>
+                    <li>
+                        <strong>Location: </strong>imgv
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">shutdown.sh</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>F
+                    </li>
+                    <li>
+                        <strong>Size: </strong>378
+                    </li>
+                    <li>
+                        <strong>Location: </strong>scripts
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">gym</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>D
+                    </li>
+                    <li>
+                        <strong>Size: </strong>-
+                    </li>
+                    <li>
+                        <strong>Location: </strong>denw
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">users</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>D
+                    </li>
+                    <li>
+                        <strong>Size: </strong>-
+                    </li>
+                    <li>
+                        <strong>Location: </strong>ROOT
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">usere</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>D
+                    </li>
+                    <li>
+                        <strong>Size: </strong>-
+                    </li>
+                    <li>
+                        <strong>Location: </strong>users
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">system</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>D
+                    </li>
+                    <li>
+                        <strong>Size: </strong>-
+                    </li>
+                    <li>
+                        <strong>Location: </strong>logs
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">logs</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>D
+                    </li>
+                    <li>
+                        <strong>Size: </strong>-
+                    </li>
+                    <li>
+                        <strong>Location: </strong>ROOT
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">server</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>D
+                    </li>
+                    <li>
+                        <strong>Size: </strong>-
+                    </li>
+                    <li>
+                        <strong>Location: </strong>logs
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">scripts</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>D
+                    </li>
+                    <li>
+                        <strong>Size: </strong>-
+                    </li>
+                    <li>
+                        <strong>Location: </strong>bin
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">opps</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>D
+                    </li>
+                    <li>
+                        <strong>Size: </strong>-
+                    </li>
+                    <li>
+                        <strong>Location: </strong>env
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">summer.png</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>F
+                    </li>
+                    <li>
+                        <strong>Size: </strong>698542
+                    </li>
+                    <li>
+                        <strong>Location: </strong>seasons
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">access.log</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>F
+                    </li>
+                    <li>
+                        <strong>Size: </strong>698745
+                    </li>
+                    <li>
+                        <strong>Location: </strong>arc
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">arc</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>D
+                    </li>
+                    <li>
+                        <strong>Size: </strong>-
+                    </li>
+                    <li>
+                        <strong>Location: </strong>denw
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">bin</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>D
+                    </li>
+                    <li>
+                        <strong>Size: </strong>-
+                    </li>
+                    <li>
+                        <strong>Location: </strong>ROOT
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">userb</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>D
+                    </li>
+                    <li>
+                        <strong>Size: </strong>-
+                    </li>
+                    <li>
+                        <strong>Location: </strong>users
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">images</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>D
+                    </li>
+                    <li>
+                        <strong>Size: </strong>-
+                    </li>
+                    <li>
+                        <strong>Location: </strong>usere
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">access.log</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>F
+                    </li>
+                    <li>
+                        <strong>Size: </strong>98562
+                    </li>
+                    <li>
+                        <strong>Location: </strong>gym
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">test.jpg</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>F
+                    </li>
+                    <li>
+                        <strong>Size: </strong>0
+                    </li>
+                    <li>
+                        <strong>Location: </strong>usera
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">1024</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>F
+                    </li>
+                    <li>
+                        <strong>Size: </strong>7899
+                    </li>
+                    <li>
+                        <strong>Location: </strong>usere
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">programs</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>D
+                    </li>
+                    <li>
+                        <strong>Size: </strong>-
+                    </li>
+                    <li>
+                        <strong>Location: </strong>ROOT
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">spring.png</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>F
+                    </li>
+                    <li>
+                        <strong>Size: </strong>578521
+                    </li>
+                    <li>
+                        <strong>Location: </strong>seasons
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">access.log</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>F
+                    </li>
+                    <li>
+                        <strong>Size: </strong>3698
+                    </li>
+                    <li>
+                        <strong>Location: </strong>dfun
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">lockfile</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>F
+                    </li>
+                    <li>
+                        <strong>Size: </strong>27
+                    </li>
+                    <li>
+                        <strong>Location: </strong>locks
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">dump</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>F
+                    </li>
+                    <li>
+                        <strong>Size: </strong>126
+                    </li>
+                    <li>
+                        <strong>Location: </strong>proc
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">systemorc.lib</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>F
+                    </li>
+                    <li>
+                        <strong>Size: </strong>22567
+                    </li>
+                    <li>
+                        <strong>Location: </strong>imgv
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">imgviewer</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>F
+                    </li>
+                    <li>
+                        <strong>Size: </strong>69825
+                    </li>
+                    <li>
+                        <strong>Location: </strong>imgv
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">vid.restored</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>F
+                    </li>
+                    <li>
+                        <strong>Size: </strong>0
+                    </li>
+                    <li>
+                        <strong>Location: </strong>videos
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">seasons</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>D
+                    </li>
+                    <li>
+                        <strong>Size: </strong>-
+                    </li>
+                    <li>
+                        <strong>Location: </strong>images
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">teamers</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>D
+                    </li>
+                    <li>
+                        <strong>Size: </strong>-
+                    </li>
+                    <li>
+                        <strong>Location: </strong>denw
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">error.log</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>F
+                    </li>
+                    <li>
+                        <strong>Size: </strong>12452144
+                    </li>
+                    <li>
+                        <strong>Location: </strong>server
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">sys.log</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>D
+                    </li>
+                    <li>
+                        <strong>Size: </strong>-
+                    </li>
+                    <li>
+                        <strong>Location: </strong>system
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">userd</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>D
+                    </li>
+                    <li>
+                        <strong>Size: </strong>-
+                    </li>
+                    <li>
+                        <strong>Location: </strong>users
+                    </li>
+                </ul>
+            </div>
+            <div class="resource">
+                <h2 class="lead list-group-item list-group-item-primary">bgon</h2>
+                <ul class="list-unstyled pl-3 list-group-item">
+                    <li>
+                        <strong>Type: </strong>F
+                    </li>
+                    <li>
+                        <strong>Size: </strong>78012
+                    </li>
+                    <li>
+                        <strong>Location: </strong>bin
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-6" id="tree">
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
