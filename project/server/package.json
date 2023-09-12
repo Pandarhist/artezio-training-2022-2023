@@ -1,0 +1,20 @@
+{
+  "name": "artezio-office-server",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "Artezio Office Plan Application :: Server",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "author": "Artezio LLC",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mysql2": "^3.5.2",
+    "uuid": "^9.0.0"
+  }
+}

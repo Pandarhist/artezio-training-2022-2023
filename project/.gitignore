@@ -1,0 +1,15 @@
+# Файл .gitignore с путями для игнорирования отслеживания изменений в них
+# Подробнее - https://devacademy.ru/article/ignorirovanie-faylov-i-katalogov-v-git
+
+# Папка с локальной конфигурацией проекта от IntelliJ IDEA или WebStorm
+.idea/
+
+# Папка с локальной конфигурацией проекта от Visual Studio Code
+.vscode/
+
+# Папки node_modules с зависимостями от npm
+server/node_modules/
+client/node_modules/
+
+# Файл с конфигурацией подключения к Базе данных
+server/src/.env
