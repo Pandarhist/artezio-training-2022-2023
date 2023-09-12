@@ -1,0 +1,13 @@
+/**
+ * Файл со стилями собственной темы Bootstrap
+ */
+
+.bg-artezio {
+    background-color: rgb(218, 21, 44);
+}
+
+.navbar-brand {
+    padding: 0;
+    margin-top: -35px;
+    margin-bottom: -35px;
+}

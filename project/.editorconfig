@@ -1,0 +1,20 @@
+# Файл с настройками для редакторов кода и IDE.
+# Подробнее на https://EditorConfig.org
+
+[*]
+end_of_line = lf
+insert_final_newline = true
+
+# Кодировка всех файлов
+[*.{css,html,js,json,md,sql}]
+charset = utf-8
+
+# Пробельные отступы в файлах исходного кода
+[*.{css,html,js}]
+indent_style = space
+indent_size = 4
+
+# Отдельная настройка для npm-ориентированных файлов.
+[{package.json,package-lock.json}]
+indent_style = space
+indent_size = 2
